@@ -15,11 +15,18 @@ class CreateSalasTable extends Migration
     {
         Schema::create('salas', function (Blueprint $table) {
             $table->id();
-            $table->string('filme', 55);
-            $table->string('generos', 55);
+            $table->string('filme',55);
+            $table->unsignedBigInteger('genero_id');
             $table->timestamps();
         });
+    
+        Schema::table('salas', function (Blueprint $table) {
+             $table->foreign('genero_id')->references('id')->on('generos')->onDelete('cascade');
+        
+        });
+
     }
+
 
     /**
      * Reverse the migrations.

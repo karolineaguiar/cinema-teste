@@ -16,8 +16,8 @@
        </div>
     <br>
        <div class="form-group">
-            <label for="generos">Gêneros:</label>
-            <input type="text" class="form-control" name="generos" placeholder="Digite o gênero cinematográfico">
+            <label for="genero">Gêneros:</label>
+            <input type="text" class="form-control" name="genero">
        </div>
     <br>
        <div class="form-group">
